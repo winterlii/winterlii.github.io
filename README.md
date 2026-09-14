@@ -34,6 +34,5 @@ git submodule update --init --recursive
 pelican content -s pelicanconf.py
 
 ## import ghp-import for gitbub branch load
-```
 ghp-import -n -p -f output -b gh-pages
 ```
