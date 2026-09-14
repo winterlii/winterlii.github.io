@@ -33,6 +33,9 @@ git submodule update --init --recursive
 ## build pelican static website
 pelican content -s pelicanconf.py
 
+## local webset check, if display in linux, linux system need to enable port 3588
+pelican --listen
+
 ## import ghp-import for gitbub branch load
 ghp-import -n -p -f output -b gh-pages
 ```
