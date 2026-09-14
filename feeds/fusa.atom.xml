@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Sumarization - FuSa</title><link href="/" rel="alternate"/><link href="/feeds/fusa.atom.xml" rel="self"/><id>/</id><updated>2026-09-14T10:20:00+08:00</updated><subtitle>concentrate</subtitle><entry><title>ESP32 Environment Setup</title><link href="/esp32-environment-setup-zh-CN.html" rel="alternate"/><published>2026-09-14T10:20:00+08:00</published><updated>2026-09-14T10:20:00+08:00</updated><author><name>winter</name></author><id>tag:None,2026-09-14:/esp32-environment-setup-zh-CN.html</id><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;&lt;/ul&gt;
+&lt;/div&gt;</content><category term="FuSa"/></entry><entry><title>Function safty course 1</title><link href="/function-safty-course-1-zh-CN.html" rel="alternate"/><published>2025-03-10T10:20:00+08:00</published><updated>2025-03-10T10:20:00+08:00</updated><author><name>winter</name></author><id>tag:None,2025-03-10:/function-safty-course-1-zh-CN.html</id><summary type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#general-concept"&gt;General concept&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#_1"&gt;功能安全介绍&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#_2"&gt;什么是功能安全&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#_3"&gt;功能安全目标&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#_4"&gt;功能安全周期&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="general-concept"&gt;General concept&lt;/h2&gt;
+&lt;p&gt;功能安全&lt;strong&gt;动机&lt;/strong&gt;：安全相关问题伤害人并可导 …&lt;/p&gt;</summary><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#general-concept"&gt;General concept&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#_1"&gt;功能安全介绍&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#_2"&gt;什么是功能安全&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#_3"&gt;功能安全目标&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#_4"&gt;功能安全周期&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="general-concept"&gt;General concept&lt;/h2&gt;
+&lt;p&gt;功能安全&lt;strong&gt;动机&lt;/strong&gt;：安全相关问题伤害人并可导致高额修复活不可预期成本增加
+功能安全失效包含:
+- 系统性失效
+- 随机性失效&lt;/p&gt;
+&lt;p&gt;新版2018版相较于2011年版本，功能安全主要更新包含以下几点：
+- 范围增加电控相关功能安全介绍
+- 试用范围扩大到3.5吨以上车辆，试用范围更广
+- 增加摩托车
+- 信息安全
+- Part11 部分只要针对功能安全再芯片领域的指南&lt;/p&gt;
+&lt;p&gt;功能安全的&lt;strong&gt;目的&lt;/strong&gt;：
++ 用于安全相关的系统
+    + 包括一个或多个电气电力系统
+    + 量产的路面车辆，不包含助理脚踏车
++ 特殊功能车辆不在功能安全考虑范围之内
++ 主要关注由于电子相关系统失效导致的伤害&lt;/p&gt;
+&lt;h2 id="_1"&gt;功能安全介绍&lt;/h2&gt;
+&lt;h3 id="_2"&gt;什么是功能安全&lt;/h3&gt;
+&lt;p&gt;ISO26262 对功能安全的定义: 整车层级危害分析与风险评估衍生的最高安全层级要求&lt;/p&gt;
+&lt;h3 id="_3"&gt;功能安全目标&lt;/h3&gt;
+&lt;p&gt;针对行车级别的伤害分析结果及风险评估的顶层安全需求
+功能安全主要关注:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;系统性失效, 如:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Software bug&lt;/li&gt;
+&lt;li&gt;奔腾FDIV bug&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;随机性失效, 如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;非预期老化&lt;/li&gt;
+&lt;li&gt;电路短路&lt;/li&gt;
+&lt;li&gt;断线&lt;/li&gt;
+&lt;li&gt;软错误（瞬态故障，参照JESD89A） 宇宙中高能粒子对失效的影响&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;设计冗余的两种方法：
++ 同质冗余（homogeneous redundancy）
++ 多样性冗余（divers redundancy）&lt;/p&gt;
+&lt;h2 id="_4"&gt;功能安全周期&lt;/h2&gt;</content><category term="FuSa"/></entry></feed>
