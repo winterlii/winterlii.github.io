@@ -1,7 +1,7 @@
 # this config and custom css reference qian-gu.github.io settings
 AUTHOR = 'winter'
 SITENAME = "Sumarization"
-SITEURL = "https://wantong.github.io"
+SITEURL = "https://winterlii.github.io"
 
 SITETITLE = AUTHOR
 SITESUBTITLE = u"concentrate"
@@ -11,8 +11,8 @@ FAVICON = SITEURL + '/images/web_icon_64x64.icon'
 BROWSER_COLOR = '#333333'
 RELATIVE_URLS = True
 
-SOCIAL = (('envelope', 'mailto:liwantong@163.com'),
-    ('github','https://github.com/wantong'),
+SOCIAL = (('envelope', 'mailto:liwantong287504461@163.com'),
+    ('github','https://github.com/winterlii'),
         )
 
 MENUITEMS = (('Authors', '/authors.html'),
@@ -36,9 +36,9 @@ THEME = 'Flex'
 THEME_COLOR = 'light'
 
 PLUGIN_PATHS = ['../pelican-pluginss']
-PLUGINS = ['i18n_subsites',  'neighbors',  'related_posts',
-           'sitemap', 'representative_image', 'render_math',
-           'series',]
+PLUGINS = [] #'i18n_subsites',  'neighbors',  'related_posts',
+           #'sitemap', 'representative_image', 'render_math',
+           #'series',]
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
