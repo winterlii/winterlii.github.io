@@ -1,17 +1,18 @@
+from datetime import datetime
 # this config and custom css reference qian-gu.github.io settings
-AUTHOR = 'winter'
-SITENAME = "Sumarization"
+AUTHOR = 'winterlii'
+SITENAME = "Winterlii's Tech Blog"
 SITEURL = "https://winterlii.github.io"
 
 SITETITLE = AUTHOR
-SITESUBTITLE = u"concentrate"
-SITEDESCRIPTION = "Tight your thought, fast your work flow"
+SITESUBTITLE = u"Concentrate, Do Best, Achieve More, Win Recognization"
+SITEDESCRIPTION = "Verilution - Semiconductor Area fast develop solution."
 SITELOGO = SITEURL + '/images/toppicture.png'
 FAVICON = SITEURL + '/images/web_icon_64x64.icon'
 BROWSER_COLOR = '#333333'
 RELATIVE_URLS = True
 
-SOCIAL = (('envelope', 'mailto:liwantong287504461@163.com'),
+SOCIAL = (('envelope', 'mailto:1175138604@qq.com'),
     ('github','https://github.com/winterlii'),
         )
 
@@ -30,7 +31,7 @@ OG_LOCALE = 'zh_CN'          # Open Graph 元数�?�?言
 LOCALE = 'zh_CN.UTF-8'       # �?地化设置（确保系统已安�?��?��??言包）
 
 BIND = "0.0.0.0"  # 允�?��?�部访问
-PORT = 3588          # 指定�?�?
+PORT = 3688          # 指定�?�?
 
 THEME = 'Flex'
 THEME_COLOR = 'light'
@@ -71,7 +72,7 @@ CC_LICENSE = {
     "slug": "by-sa"
 }
 
-COPYRIGHT_YEAR = 2025
+COPYRIGHT_YEAR = datetime.now().year
 
 #  STATIC_PATHS = ["extra/custom.css"]
 

@@ -1,7 +1,7 @@
 Title: Function safty course 1
 Date: 2025-03-10 10:20
 Category: FuSa
-Tag: Automotive
+Tags: Automotive
 Lang: zh-CN
 
 [TOC]
