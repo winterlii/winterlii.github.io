@@ -10,26 +10,26 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="./theme/stylesheet/style.min.css">
+    <link rel="stylesheet" type="text/css" href="../theme/stylesheet/style.min.css">
 
     <link id="dark-theme-style" rel="stylesheet" type="text/css"
           media="(prefers-color-scheme: dark)"
-    href="./theme/stylesheet/dark-theme.min.css">
+    href="../theme/stylesheet/dark-theme.min.css">
 
     <link id="pygments-dark-theme" rel="stylesheet" type="text/css"
               media="(prefers-color-scheme: dark)"
-          href="./theme/pygments/monokai.min.css">
+          href="../theme/pygments/monokai.min.css">
     <link id="pygments-light-theme" rel="stylesheet" type="text/css"
               media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
-          href="./theme/pygments/monokai.min.css">
+          href="../theme/pygments/monokai.min.css">
 
 
 
-  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/fontawesome.css">
-  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/brands.css">
-  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/solid.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/solid.css">
 
-  <link rel="stylesheet" type="text/css" href="./static/custom.css">
+  <link rel="stylesheet" type="text/css" href="../static/custom.css">
 
   <link rel="shortcut icon" href="https://winterlii.github.io/images/web_icon_64x64.icon" type="image/x-icon">
   <link rel="icon" href="https://winterlii.github.io/images/web_icon_64x64.icon" type="image/x-icon">
@@ -61,10 +61,10 @@
   <meta property="og:title" content="Winterlii's Tech Blog"/>
   <meta property="og:description" content="Verilution - Semiconductor Area fast develop solution."/>
   <meta property="og:locale" content="zh_CN"/>
-  <meta property="og:url" content="."/>
+  <meta property="og:url" content=".."/>
   <meta property="og:image" content="https://winterlii.github.io/images/toppicture.png">
 
-  <title>Winterlii's Tech Blog</title>
+  <title>Winterlii's Tech Blog &ndash; Tag ubuntu</title>
 
 
 </head>
@@ -72,12 +72,12 @@
 
 <aside>
   <div>
-    <a href="./">
+    <a href="../">
       <img src="https://winterlii.github.io/images/toppicture.png" alt="winterlii" title="winterlii">
     </a>
 
     <h1>
-      <a href="./">winterlii</a>
+      <a href="../">winterlii</a>
     </h1>
 
     <p>Concentrate, Do Best, Achieve More, Win Recognization</p>
@@ -106,7 +106,7 @@ rel="me"           href="mailto:1175138604@qq.com"
   <main>
 
 <nav>
-  <a href="./">Home</a>
+  <a href="../">Home</a>
 
   <a href="/authors.html">Authors</a>
   <a href="/archives.html">Archives</a>
@@ -120,45 +120,12 @@ rel="me"           href="mailto:1175138604@qq.com"
 
 <article>
   <header>
-    <h2><a href="./esp32-setup-st7789p3-display-zh-CN.html#esp32-setup-st7789p3-display">ESP32 setup ST7789P3 display</a></h2>
+    <h2><a href="../esp32-environment-setup-zh-CN.html#esp32-environment-setup">ESP32 Environment Setup</a></h2>
     <p>
-      Posted on 二 15 九月 2026 in <a href="./category/embedded.html">Embedded</a>
+      Posted on 一 14 九月 2026 in <a href="../category/embedded.html">Embedded</a>
 
           &#8226; Tagged with
-              <a href="./tag/esp32.html">ESP32</a>,              <a href="./tag/lvgl.html">lvgl</a>
-    </p>
-  </header>
-  <div>
-      <div><div class="toc"><span class="toctitle">Table of Contents</span><ul>
-<li><a href="#hardware-prepare">Hardware Prepare</a><ul>
-<li><a href="#_1">硬件到齐后进行组装</a></li>
-</ul>
-</li>
-<li><a href="#_2">软件开发步骤</a></li>
-</ul>
-</div>
-<h2 id="hardware-prepare">Hardware Prepare</h2>
-<ul>
-<li>ESP32-s3 develop board 淘宝购买 <a href="https://detail.tmall.com/item.htm?app=weixin&amp;bc_fl_src=share-1041512994912843-2-1&amp;bxsign=scdG-wsy5A5JpHob5iV98c4wv5aFAnHEgMvqux6Q9LZo1G0eMXLXeoOJmjdeU_Hwtcd1CWHmCYK_XVN0UNOhPvZl0f5T5vijvXWo5RAAUmtnBTigmcF2S3b1rxqTSfaDjyB&amp;cpp=1&amp;h5_spm=a-tb-item.b-tb-item&amp;id=775315741690&amp;share_crt_v=1&amp;shareurl=true&amp;short_name=h.8LPcQFOSLrR3L9m&amp;sp_tk=VlBPQ1Q2Vk5pQjA%3D&amp;spm=a2159r.13376460.0.0&amp;tbSocialPopKey=shareItem&amp;tk=VPOCT6VNiB0&amp;un=535208b4d620fcbcd707d2abce2ca380&amp;un_site=0&amp;ut_sk=1.Ywm80VtKljgDAO%2FJEzolAHHG_21380790_1788777356234.TaoPassword-Weixin.1&amp;wxsign=tbwlgyOXChpNjZE3Vrs7TkbbJi3757fUfRyDEKYxhLAaohOOaBwMTUKRQRScGWCL8ReTKAIIr2xXyhk-gy7AO02OuElGuKWGJplWOQ0CMF934eCr2fTV94LfqfJBNoX4nZN&amp;x-ssr=true">ESP32-S3 N16R8</a></li>
-<li>转接板, 嘉立创打样</li>
-<li>ST7789 屏幕</li>
-<li>其他硬件：排针，排母 …</li></ul></div>
-        <br>
-        <a class="btn"
-           href="./esp32-setup-st7789p3-display-zh-CN.html#esp32-setup-st7789p3-display">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="./esp32-environment-setup-zh-CN.html#esp32-environment-setup">ESP32 Environment Setup</a></h2>
-    <p>
-      Posted on 一 14 九月 2026 in <a href="./category/embedded.html">Embedded</a>
-
-          &#8226; Tagged with
-              <a href="./tag/esp32.html">esp32</a>,              <a href="./tag/ubuntu.html">ubuntu</a>,              <a href="./tag/vscode.html">vscode</a>
+              <a href="../tag/esp32.html">esp32</a>,              <a href="../tag/ubuntu.html">ubuntu</a>,              <a href="../tag/vscode.html">vscode</a>
     </p>
   </header>
   <div>
@@ -172,38 +139,7 @@ rel="me"           href="mailto:1175138604@qq.com"
 <li><a href="#_3">以上步骤都执行完，就可以实现观察代码的编译和调 …</a></li></ul></div></div>
         <br>
         <a class="btn"
-           href="./esp32-environment-setup-zh-CN.html#esp32-environment-setup">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="./function-safty-course-1-zh-CN.html#function-safty-course-1">Function safty course 1</a></h2>
-    <p>
-      Posted on 一 10 三月 2025 in <a href="./category/fusa.html">FuSa</a>
-
-          &#8226; Tagged with
-              <a href="./tag/automotive.html">Automotive</a>
-    </p>
-  </header>
-  <div>
-      <div><div class="toc"><span class="toctitle">Table of Contents</span><ul>
-<li><a href="#general-concept">General concept</a></li>
-<li><a href="#_1">功能安全介绍</a><ul>
-<li><a href="#_2">什么是功能安全</a></li>
-<li><a href="#_3">功能安全目标</a></li>
-</ul>
-</li>
-<li><a href="#_4">功能安全周期</a></li>
-</ul>
-</div>
-<h2 id="general-concept">General concept</h2>
-<p>功能安全<strong>动机</strong>：安全相关问题伤害人并可导 …</p></div>
-        <br>
-        <a class="btn"
-           href="./function-safty-course-1-zh-CN.html#function-safty-course-1">
+           href="../esp32-environment-setup-zh-CN.html#esp32-environment-setup">
           Continue reading
         </a>
   </div>
@@ -223,7 +159,7 @@ Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a 
   <span class="footer-separator">|</span>
   Switch to the <a href="javascript:void(0)" onclick="theme.switch(`dark`)">dark</a> | <a href="javascript:void(0)" onclick="theme.switch(`light`)">light</a> | <a href="javascript:void(0)" onclick="theme.switch(`browser`)">browser</a> theme
   <script id="dark-theme-script"
-          src="./theme/dark-theme/dark-theme.min.js"
+          src="../theme/dark-theme/dark-theme.min.js"
           data-enable-auto-detect-theme="True"
           data-default-theme="ligtht"
           type="text/javascript">
@@ -246,7 +182,7 @@ Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a 
   "@context" : "http://schema.org",
   "@type" : "Blog",
   "name": " Winterlii's Tech Blog ",
-  "url" : ".",
+  "url" : "..",
   "image": "https://winterlii.github.io/images/toppicture.png",
   "description": "Verilution - Semiconductor Area fast develop solution."
 }

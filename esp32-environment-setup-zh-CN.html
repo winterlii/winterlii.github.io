@@ -54,24 +54,27 @@
 
  
 
-<meta name="author" content="winter" />
-<meta name="description" content="Table of Contents" />
-<meta name="keywords" content="">
+<meta name="author" content="winterlii" />
+<meta name="description" content="Table of Contents 产品来源 环境搭建 ubuntu 系统安装要求及步骤 windows 系统安装要求 以上步骤都执行完，就可以实现观察代码的编译和调 …" />
+<meta name="keywords" content="esp32, ubuntu, vscode">
 
 
-  <meta property="og:site_name" content="Sumarization"/>
+  <meta property="og:site_name" content="Winterlii's Tech Blog"/>
   <meta property="og:title" content="ESP32 Environment Setup"/>
-  <meta property="og:description" content="Table of Contents"/>
+  <meta property="og:description" content="Table of Contents 产品来源 环境搭建 ubuntu 系统安装要求及步骤 windows 系统安装要求 以上步骤都执行完，就可以实现观察代码的编译和调 …"/>
   <meta property="og:locale" content="zh_CN"/>
   <meta property="og:url" content="./esp32-environment-setup-zh-CN.html"/>
   <meta property="og:type" content="article"/>
   <meta property="article:published_time" content="2026-09-14 10:20:00+08:00"/>
   <meta property="article:modified_time" content=""/>
-  <meta property="article:author" content="./author/winter.html">
-  <meta property="article:section" content="FuSa"/>
+  <meta property="article:author" content="./author/winterlii.html">
+  <meta property="article:section" content="Embedded"/>
+  <meta property="article:tag" content="esp32"/>
+  <meta property="article:tag" content="ubuntu"/>
+  <meta property="article:tag" content="vscode"/>
   <meta property="og:image" content="https://winterlii.github.io/images/toppicture.png">
 
-  <title>Sumarization &ndash; ESP32 Environment Setup</title>
+  <title>Winterlii's Tech Blog &ndash; ESP32 Environment Setup</title>
 
 
 </head>
@@ -80,21 +83,21 @@
 <aside>
   <div>
     <a href="./">
-      <img src="https://winterlii.github.io/images/toppicture.png" alt="winter" title="winter">
+      <img src="https://winterlii.github.io/images/toppicture.png" alt="winterlii" title="winterlii">
     </a>
 
     <h1>
-      <a href="./">winter</a>
+      <a href="./">winterlii</a>
     </h1>
 
-    <p>concentrate</p>
+    <p>Concentrate, Do Best, Achieve More, Win Recognization</p>
 
 
 
     <ul class="social">
       <li>
         <a class="sc-envelope"
-rel="me"           href="mailto:liwantong287504461@163.com"
+rel="me"           href="mailto:1175138604@qq.com"
            target="_blank">
           <i class="fa-solid fa-envelope"></i>
         </a>
@@ -128,18 +131,134 @@ rel="me"           href="mailto:liwantong287504461@163.com"
       
     <h1 id="esp32-environment-setup">ESP32 Environment Setup</h1>
     <p>
-      Posted on 一 14 九月 2026 in <a href="./category/fusa.html">FuSa</a>
+      Posted on 一 14 九月 2026 in <a href="./category/embedded.html">Embedded</a>
 
     </p>
   </header>
 
 
   <div>
-    <div class="toc"><span class="toctitle">Table of Contents</span><ul></ul>
+    <div class="toc"><span class="toctitle">Table of Contents</span><ul>
+<li><a href="#_1">产品来源</a></li>
+<li><a href="#_2">环境搭建</a><ul>
+<li><a href="#ubuntu">ubuntu 系统安装要求及步骤</a></li>
+<li><a href="#windows">windows 系统安装要求</a></li>
+</ul>
+</li>
+<li><a href="#_3">以上步骤都执行完，就可以实现观察代码的编译和调试了</a></li>
+</ul>
+</div>
+<h2 id="_1">产品来源</h2>
+<p>淘宝购买 <a href="https://detail.tmall.com/item.htm?app=weixin&amp;bc_fl_src=share-1041512994912843-2-1&amp;bxsign=scdG-wsy5A5JpHob5iV98c4wv5aFAnHEgMvqux6Q9LZo1G0eMXLXeoOJmjdeU_Hwtcd1CWHmCYK_XVN0UNOhPvZl0f5T5vijvXWo5RAAUmtnBTigmcF2S3b1rxqTSfaDjyB&amp;cpp=1&amp;h5_spm=a-tb-item.b-tb-item&amp;id=775315741690&amp;share_crt_v=1&amp;shareurl=true&amp;short_name=h.8LPcQFOSLrR3L9m&amp;sp_tk=VlBPQ1Q2Vk5pQjA%3D&amp;spm=a2159r.13376460.0.0&amp;tbSocialPopKey=shareItem&amp;tk=VPOCT6VNiB0&amp;un=535208b4d620fcbcd707d2abce2ca380&amp;un_site=0&amp;ut_sk=1.Ywm80VtKljgDAO%2FJEzolAHHG_21380790_1788777356234.TaoPassword-Weixin.1&amp;wxsign=tbwlgyOXChpNjZE3Vrs7TkbbJi3757fUfRyDEKYxhLAaohOOaBwMTUKRQRScGWCL8ReTKAIIr2xXyhk-gy7AO02OuElGuKWGJplWOQ0CMF934eCr2fTV94LfqfJBNoX4nZN&amp;x-ssr=true">ESP32-S3 N16R8</a></p>
+<h2 id="_2">环境搭建</h2>
+<p>由于ESP32 windows下编译效率比较低，所以我选择的ubuntu主机和windows remote方式来实现的编译调试。
+以下分为ubuntu安装步骤和windows 的ssh步骤分别介绍</p>
+<h3 id="ubuntu">ubuntu 系统安装要求及步骤</h3>
+<ul>
+<li>使用的ubuntu系统: Ubuntu 24.04.4 LTS</li>
+<li>安装eim</li>
+</ul>
+<div class="highlight"><pre><span></span><code># step 1 添加乐鑫软件镜像源到ubuntu apt list
+echo &quot;deb [trusted=yes] https://dl.espressif.com/dl/eim/apt/ stable main&quot; | sudo tee /etc/apt/sources.list.d/espressif.list
+sudo apt update 
+
+# step 2 安装eim
+sudo apt install eim
+
+# setp 3 启动eim
+eim
+</code></pre></div>
+
+<ul>
+<li>启动eim后，点击新安装，再选择简易安装即可，静待安装完成</li>
+<li>由于usb系统需要添加allow list 所以需要将如下list添加入ubuntu的路径/etc/udev/rules.d/60-openocd.rules 路径<a href="https://github.com/openocd-org/openocd/blob/master/contrib/60-openocd.rules">官方参考文件路径</a><sup id="fnref:ai-node"><a class="footnote-ref" href="#fn:ai-node">1</a></sup></li>
+<li>添加完成后执行以下命令<sup id="fnref2:ai-node"><a class="footnote-ref" href="#fn:ai-node">1</a></sup></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">sudo</span><span class="w"> </span><span class="n">udevadm</span><span class="w"> </span><span class="n">control</span><span class="w"> </span><span class="o">--</span><span class="n">reload</span><span class="o">-</span><span class="n">rules</span>
+<span class="n">sudo</span><span class="w"> </span><span class="n">udevadm</span><span class="w"> </span><span class="n">trigger</span>
+<span class="n">sudo</span><span class="w"> </span><span class="n">udevadm</span><span class="w"> </span><span class="n">trigger</span>
+</code></pre></div>
+
+<h3 id="windows">windows 系统安装要求</h3>
+<ul>
+<li>安装vscode</li>
+<li>在vscode 安装remote ssh</li>
+<li>通过remote ssh 连接ubuntu主机.</li>
+<li>连接成功后，在vscode 连接成功界面添加插件ESP-IDF 插件</li>
+<li>插件安装完成，点击侧边栏，选择Advanced折叠标签，选择新项目向导
+<img alt="alt text" src="..\images\image-2.png"></li>
+<li>新建hello world 工程
+<img alt="alt text" src="..\images\image-3.png"></li>
+<li>进入工程后，在Vscode下方工具条，分别点选红框选项<ul>
+<li>
+<ol>
+<li>USB-JTAG</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>USB 选择带Espressif的tty，如果没有参照ai-node进行配置安装</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>device选择esp32s3
+<img alt="alt text" src="..\images\image-4.png"></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>windows 按F1，创建ESP-IDF VSCODE configure文件
+<img alt="alt text" src="..\images\image-5.png"></li>
+<li>打开OpenOCD，这里我有踩到一个坑，如果openocd打开失败，可以在ubuntu系统执行指令 lsusb, 如果显示的303a:4001则说明芯片现在boot的模式由固件接管，那么openocd无法执行调试，此问题解决方式也简单，按照如下步骤<ul>
+<li>
+<ol>
+<li>拔下usb</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>按住板子上的boot按键，插上usb，此时boot按键不要松开</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>按以下rst按键，此时boot键也不要松开</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>松开boot按键</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>再在ubuntu系统执行lsusb，就可以看到设备标识编程303a:1001了，这个状态下再去startopenocd，就可以实现调试了。</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="_3">以上步骤都执行完，就可以实现观察代码的编译和调试了</h2>
+<ul>
+<li>点击VSCODE下方的编译按钮编译新建的工程</li>
+<li>点击调试按钮即可看到debug界面了，不过这里的debug是无法实现vscode和debug断点的连接的，等我下一篇文章介绍。
+<img alt="alt text" src="..\images\image-6.png"></li>
+</ul>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:ai-node">
+<p>此处仅需在ubuntu系统无法识别到usb设备时执行&#160;<a class="footnote-backref" href="#fnref:ai-node" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:ai-node" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
 </div>
   </div>
   <div class="tag-cloud">
     <p>
+      <a href="./tag/esp32.html">esp32</a>
+      <a href="./tag/ubuntu.html">ubuntu</a>
+      <a href="./tag/vscode.html">vscode</a>
     </p>
   </div>
 
@@ -152,7 +271,7 @@ rel="me"           href="mailto:liwantong287504461@163.com"
 
 <footer>
 <p>
-  &copy; 2025  - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.en_US" target="_blank">Creative Commons Attribution-ShareAlike</a>
+  &copy; 2026  - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.en_US" target="_blank">Creative Commons Attribution-ShareAlike</a>
 </p>
 <p>
 Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
@@ -181,10 +300,10 @@ Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a 
 {
   "@context" : "http://schema.org",
   "@type" : "Blog",
-  "name": " Sumarization ",
+  "name": " Winterlii's Tech Blog ",
   "url" : ".",
   "image": "https://winterlii.github.io/images/toppicture.png",
-  "description": "Tight your thought, fast your work flow"
+  "description": "Verilution - Semiconductor Area fast develop solution."
 }
 </script>
 </body>
